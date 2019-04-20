@@ -8,14 +8,10 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
+use think\Route;
 
-return [
-    '__pattern__' => [
-        'name' => '\w+',
-    ],
-    '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
-    ],
-
-];
+// 首页路由
+Route::get('/','index/index');
+// hello路由例子
+// "hello/hello"第一个hello是"controller"下面的Hello.php,第二个hello是Hello.php中的hello()方法
+Route::get('/hello','hello/hello');
