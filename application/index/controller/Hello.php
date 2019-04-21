@@ -7,6 +7,6 @@ class Hello extends Controller
 {
     public function hello()
     {
-        echo "hello 王女士";
+        return view("index/to");
     }
 }
